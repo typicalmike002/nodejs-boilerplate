@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "homepage": "https://github.com/typicalmike002/nodejs-boilerplate",
+  "authors": [
+    "typicalmike002 <townsendm105@gmail.com>"
+  ],
+  "description": "My nodejs boilerplate for setting up a new project quickly.",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "boilerplate"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20"
+  }
+}

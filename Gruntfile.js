@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		},
 
 		clean: {
-			js: ['public/js/*.js']
+			js: ['public/js/dst/*.js']
 		},
 
 		jshint: {
@@ -40,9 +40,21 @@ module.exports = function(grunt) {
 					expand: true,
 					src: '*.js',
 					cwd: 'public/js/src',
-					dest: 'public/js',
+					dest: 'public/js/dst',
 					ext: '.min.js'
 				}]
+			}
+		},
+
+		requirejs: {
+			compile: {
+				options: {
+					name: 'config',
+					baseUrl: 'public/js/',
+					mainConfigFile: 'public/js/config.js',
+					out: 'public/js/global.js',
+					optimize: 'none'
+				}
 			}
 		},
 
@@ -81,6 +93,8 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', [
+		'grunt-contrib-copy',
+		'grunt-contrib-requirejs',
 		'grunt-contrib-clean',
 		'grunt-contrib-jshint',
 		'grunt-contrib-uglify',

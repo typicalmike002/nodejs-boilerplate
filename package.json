@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/typicalmike002/simple-chat.git"
+    "url": "https://github.com/typicalmike002/nodejs-boilerplate.git"
   },
   "keywords": [
     "Chat"
@@ -19,22 +19,27 @@
     "url": "https://github.com/typicalmike002/simple-chat/issues"
   },
   "homepage": "https://github.com/typicalmike002/simple-chat",
-  "devDependencies": {
+  "dependencies": {
     "body-parser": "^1.13.3",
     "debug": "^2.2.0",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-combine-mq": "^0.9.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
     "load-grunt-tasks": "^3.2.0",
-    "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
+    "requirejs": "^2.1.20"
   }
 }
