@@ -1,26 +1,14 @@
-;
-define("global", function(){});
-
+define('add',[],function(){return function(a,b){return a+b}});
 require.config({
 
-	baseUrl: '/libs',
 	paths: {
-		'person': 'person.min.js',
+		add: 'minify/add.min'
 	}
+
 });
 
-require(['global'], function() {console.log('global.js is loaded');});
-define("config", function(){});
-
-
-require.config({
-
-	baseUrl: '/libs',
-	paths: {
-		'person': 'person.min.js',
-	}
+require(['add'], function(add) {
+	console.log( add(5,4) );
 });
-
-require(['global'], function() {console.log('global.js is loaded');});
 define("config", function(){});
 

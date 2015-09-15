@@ -1,9 +1,11 @@
 require.config({
 
-	baseUrl: '/libs',
 	paths: {
-		'person': 'person.min.js',
+		add: 'minify/add.min'
 	}
+
 });
 
-require(['global'], function() {console.log('global.js is loaded');});
+require(['add'], function(add) {
+	console.log( add(5,4) );
+});
