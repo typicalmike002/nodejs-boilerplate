@@ -88,12 +88,8 @@ module.exports = function(grunt) {
 				}]
 			}
 		}
-
-
 	});
-
 	grunt.registerTask('default', [
-		'grunt-contrib-requirejs',
 		'grunt-contrib-clean',
 		'grunt-contrib-jshint',
 		'grunt-contrib-uglify',
