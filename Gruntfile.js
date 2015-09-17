@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['*.js','routes/*.js', 'public/js/**/*.js'],
-				tasks: ['clean', 'jshint', 'uglify', 'create-globaljs', 'requirejs'],
+				tasks: ['clean', 'jshint', 'uglify', 'browserify'],
 				options: {
 					spawn: false
 				}
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'app.js', 'routes/*.js', 'public/js/**/*.js']
+			all: ['Gruntfile.js', 'app.js', 'routes/*.js', 'public/js/**/*.js', '!public/js/bundle.js']
 		},
 
 		uglify: {
@@ -46,14 +46,10 @@ module.exports = function(grunt) {
 			}
 		},
 
-		requirejs: {
-			compile: {
-				options: {
-					name: 'config',
-					baseUrl: 'public/js/',
-					mainConfigFile: 'public/js/config.js',
-					out: 'public/js/global.js',
-					optimize: 'none'
+		browserify: {
+			dist: {
+				files: {
+					'public/js/bundle.js': 'public/js/main.js' 
 				}
 			}
 		},
@@ -90,6 +86,7 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.registerTask('default', [
+		'grunt-browserify',
 		'grunt-contrib-clean',
 		'grunt-contrib-jshint',
 		'grunt-contrib-uglify',
@@ -97,8 +94,4 @@ module.exports = function(grunt) {
 		'grunt-contrib-combine-mq',
 		'grunt-contrib-cssmin'
 	]);
-
-	grunt.registerTask('create-globaljs', 'My custom create global.js file task.', function() {
-		grunt.file.write('public/js/global.js', '');
-	});
 };

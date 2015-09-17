@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var browserify = require('browserify-middleware');
 
 
 var routes = require('./routes/index');

@@ -1,3 +1,3 @@
-define(function() {
-	return function(a, c) { return a + c; };
-});
+module.exports = function(a, b){
+	return a + b;
+};

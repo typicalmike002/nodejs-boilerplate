@@ -1,11 +1,3 @@
-require.config({
+var add = require('./minify/add.min.js');
 
-	paths: {
-		add: 'minify/add.min'
-	}
-
-});
-
-require(['add'], function(add) {
-	console.log( add(5,4) );
-});
+console.log(add(5,7));
