@@ -31,7 +31,13 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'app.js', 'routes/*.js', 'public/js/**/*.js', '!public/js/bundle.js']
+			all: [
+				'Gruntfile.js',
+				'app.js',
+				'routes/*.js', 
+				'public/js/main.js',
+				'public/js/modules/*.js'
+			]
 		},
 
 		uglify: {

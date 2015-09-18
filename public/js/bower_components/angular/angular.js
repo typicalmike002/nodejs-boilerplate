@@ -1,4 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /**
  * @license AngularJS v1.4.6
  * (c) 2010-2015 Google, Inc. http://angularjs.org
@@ -28825,48 +28824,3 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],2:[function(require,module,exports){
-//Project Dependencies.
-require('./bower_components/angular/angular.js');
-
-//Load our state and controllers.
-var states = require('./modules/states.js');
-var homeController = require('./modules/controllers/homeController.js');
-
-
-//Begin our main.js app
-var app = angular.module('nodejs-boilerplate', []);
-
-app.config([
-	'$stateProvider',
-	'$urlRouterProvider',
-	states
-]);
-
-app.controller('homeController', [
-	'$scope',
-	homeController
-]);
-
-},{"./bower_components/angular/angular.js":1,"./modules/controllers/homeController.js":3,"./modules/states.js":4}],3:[function(require,module,exports){
-module.exports = function() {
-	return function ($scope){
-		$scope.title = 'Home';
-	};
-};
-
-
-},{}],4:[function(require,module,exports){
-module.exports = function(){
-	return function($stateProvider, $urlRouterProvider) {
-		$stateProvider
-			.state('home', {
-				url:'/home',
-				templateUrl: '/home.html',
-				controller: 'homeController'
-			});
-	};
-};
-
-
-},{}]},{},[2]);
