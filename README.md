@@ -90,10 +90,6 @@ Validates our javascript as you save javascript files.  It helps avoid typos and
 
 Renames variables to single characters, removes all whitespaces, and minifies our code to a compact size.  It will be the ugliest code you've ever seen.
 
-### [clean](https://github.com/gruntjs/grunt-contrib-clean)
-
-Deletes the files specified in the Gruntjs file.  In this case, I use clean to remove older versions of uglified code before jshint runs so it doesn't yell at me for writing terrible javascript.
-
 ### [browserify](https://github.com/jmreidy/grunt-browserify)
 
 Browserify makes modualizing your javascript code easier. In a file like main.js for example: 

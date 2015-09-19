@@ -300,8 +300,6 @@ var helloworld = require('./modules/helloworld');
 
 var app = angular.module('app', []);
 app.controller('GreetingController', ['$scope', helloworld]);
-
-
 },{"./bower_components/angular/angular.min.js":1,"./modules/helloworld":3}],3:[function(require,module,exports){
 var helloworld = function($scope){
 	$scope.greeting = 'hola!';

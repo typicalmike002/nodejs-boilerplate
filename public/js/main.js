@@ -4,4 +4,3 @@ var helloworld = require('./modules/helloworld');
 
 var app = angular.module('app', []);
 app.controller('GreetingController', ['$scope', helloworld]);
-
