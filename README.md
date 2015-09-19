@@ -6,9 +6,9 @@ My nodejs boilerplate for setting up a new project quickly using node.js and the
 
 After either making a git pull request or downloading it directly, you will need to install the boilerplate's dependencies.  Open your terminal or command prompt to the boilerplate's root directory and run the following command.
 
-'''shell
+```shell
 npm install
-'''
+```
 
 This will install all of the boilerplate's Dependencies and devDependencies into a node_modules file.  If there are any dependencies you do not with to include, simply remove them by opening the package.json file and deleting them before running npm install.
 
@@ -16,9 +16,9 @@ This will install all of the boilerplate's Dependencies and devDependencies into
 
 To test a connection from a web browser, run this command in the boilerplate's root directory.
 
-'''shell
+```shell
 npm start
-'''
+```
 
 Then in your favorite browser, navigate to [http://localhost:3000/](http://localhost:3000/).  If you see a black screen with nothing on it, you have sucessfully set up the boilerplate.  This is the beginning of your new project.
 
@@ -50,9 +50,9 @@ A filetype that stands for 'embedded javascript templates' were standard HTML ca
 
 Bower installs packages just like npm.  In this boilerplate, I have set it up so bower is only used for installing and organizing javascript libraries and frameworks used in the js folder.  For example:
 
-'''shell
+```shell
 bower install jquery
-'''
+```
 
 This will install the jquery library into "public/js/bower_components" folder.
 
@@ -72,9 +72,9 @@ A javascript task runner that handles all of the development dependency's enviro
 
 To begin using grunt, run this command inside the root folder of the boilerplate.
 
-'''shell
+```shell
 grunt watch
-'''
+```
 
 Grunt will now watch for changes and run the tasks listed in the grunt watch section of the Gruntfile.  
 
@@ -98,9 +98,9 @@ Deletes the files specified in the Gruntjs file.  In this case, I use clean to r
 
 Browserify makes modualizing your javascript code easier. In a file like main.js for example: 
 
-'''shell
+```shell
 require('./modules/add.js');
-'''
+```
 
 will load the add.js file into main.js and bundle them into bundle.js which means you can still load a single javascript file in a browser while organizing your code into multible files.  Refer to the documentation for more information about browserify. 
 
