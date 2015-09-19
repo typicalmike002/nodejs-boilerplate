@@ -1,5 +1,5 @@
 //Project Dependencies.
-require('./bower_components/angular/angular.js');
+require('./bower_components/angular/angular.min.js');
 
 //Load our state and controllers.
 var states = require('./modules/states.js');
