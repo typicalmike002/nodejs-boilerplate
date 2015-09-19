@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['*.js','routes/*.js', 'public/js/**/*.js'],
-				tasks: ['clean', 'jshint', 'uglify', 'browserify'],
+				tasks: ['jshint', 'uglify', 'browserify'],
 				options: {
 					spawn: false
 				}
@@ -26,10 +26,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		clean: {
-			js: ['public/js/minify/*.js', 'public/js/global.js']
-		},
-
 		jshint: {
 			all: [
 				'Gruntfile.js',
@@ -40,22 +36,18 @@ module.exports = function(grunt) {
 			]
 		},
 
-		uglify: {
-			build: {
-				files:[{
-					expand: true,
-					src: '*.js',
-					cwd: 'public/js/modules',
-					dest: 'public/js/minify',
-					ext: '.min.js'
-				}]
-			}
-		},
-
 		browserify: {
 			dist: {
 				files: {
 					'public/js/bundle.js': 'public/js/main.js' 
+				}
+			}
+		},
+
+		uglify: {
+			my_target: {
+				files: {
+					'public/js/bundle.min.js': 'public/js/bundle.js'
 				}
 			}
 		},
@@ -93,7 +85,6 @@ module.exports = function(grunt) {
 	});
 	grunt.registerTask('default', [
 		'grunt-browserify',
-		'grunt-contrib-clean',
 		'grunt-contrib-jshint',
 		'grunt-contrib-uglify',
 		'grunt-contrib-compass',

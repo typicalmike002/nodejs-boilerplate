@@ -1,3 +1,8 @@
 body {
-	background-color: black;
+	color: $brand-color;
+	background-color: $background;
+	margin: 0 auto;
+	max-width: 1200px;
+	text-align: center;
+	padding-top: 1em;
 }

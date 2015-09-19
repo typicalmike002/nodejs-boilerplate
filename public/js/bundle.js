@@ -294,47 +294,18 @@ maxFrac:2,minFrac:2,minInt:1,negPre:"-\u00a4",negSuf:"",posPre:"\u00a4",posSuf:"
 
 
 },{}],2:[function(require,module,exports){
-//Project Dependencies.
 require('./bower_components/angular/angular.min.js');
 
-//Load our state and controllers.
-var states = require('./modules/states.js');
-var homeController = require('./modules/controllers/homeController.js');
+var helloworld = require('./modules/helloworld');
+
+var app = angular.module('app', []);
+app.controller('GreetingController', ['$scope', helloworld]);
 
 
-//Begin our main.js app
-var app = angular.module('nodejs-boilerplate', []);
-
-app.config([
-	'$stateProvider',
-	'$urlRouterProvider',
-	states
-]);
-
-app.controller('homeController', [
-	'$scope',
-	homeController
-]);
-
-},{"./bower_components/angular/angular.min.js":1,"./modules/controllers/homeController.js":3,"./modules/states.js":4}],3:[function(require,module,exports){
-module.exports = function() {
-	return function ($scope){
-		$scope.title = 'Home';
-	};
+},{"./bower_components/angular/angular.min.js":1,"./modules/helloworld":3}],3:[function(require,module,exports){
+var helloworld = function($scope){
+	$scope.greeting = 'hola!';
 };
 
-
-},{}],4:[function(require,module,exports){
-module.exports = function(){
-	return function($stateProvider, $urlRouterProvider) {
-		$stateProvider
-			.state('home', {
-				url:'/home',
-				templateUrl: '/home.html',
-				controller: 'homeController'
-			});
-	};
-};
-
-
+module.exports = helloworld;
 },{}]},{},[2]);
