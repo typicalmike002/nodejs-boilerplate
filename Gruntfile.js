@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 				livereload: true,
 			},
 			scripts: {
-				files: ['*.js','routes/*.js', 'public/js/**/*.js'],
+				files: ['*.js','routes/*.js', 'public/js/*.js', 'public/js/modules/**/*.js'],
 				tasks: ['jshint', 'uglify', 'browserify'],
 				options: {
 					spawn: false

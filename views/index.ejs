@@ -6,15 +6,31 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>NodeJS Boilerplate</title>
 		<link href="/css/style.css" rel="stylesheet">	
-		<script src="/js/bundle.min.js"></script>
 	</head>
 	<body>
+		<!-- HEADER CONTENT -->
 		<header>
 			<div class="logo">
-				<a href="/"><img src="/img/logo.png"></a>
+				<a href="/home"><img src="/img/logo.png"></a>
 			</div>
+			<nav>
+				<div ng-controller="MainCtrl as main">
+					<ul class="nav">
+						<li>
+							<a href="/#/home">Home</a>
+						</li>
+						<li>
+							<a href="/#/about">About</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</header>
+		<!-- PAGE CONTENT -->
 		<main>
-			<div ng-controller="GreetingController">{{greeting}}</div>
+			<ui-view></ui-view>
+		</main>
+		<!-- LOADS JAVASCRIPTS -->
+		<script src="/js/bundle.js"></script>
 	</body>
 </html>
