@@ -6,9 +6,9 @@ var logger = require('./utils/logger');
 var morgan = require('morgan');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
+var compression = require('compression');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 
 var app = express();
@@ -21,9 +21,14 @@ if (!fs.existsSync(logDirectory)) { fs.mkdirSync(logDirectory); }
 app.use(morgan('combined', {stream: logger.stream}));
 
 
+//Compression
+app.use(compression( { threshold: 0 }));
+
+
 //Application Configuration
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
 
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
