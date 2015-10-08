@@ -33201,25 +33201,17 @@ require('./bower_components/angular/angular.js');
 require('./bower_components/angular-ui-router/release/angular-ui-router.js');
 
 var app = angular.module('app', ['ui.router']);
+
 var ui_router = require('./modules/ui_router.js');
-app.config(['$stateProvider',
-			'$urlRouterProvider', 
-			ui_router
-]);
+app.config(['$locationProvider','$urlRouterProvider','$stateProvider',ui_router]);
 
 
 var home_controller = require('./modules/home/home_controller');
-app.controller('MainCtrl', [
-				'$scope',
-				home_controller
-]);
+app.controller('MainCtrl', ['$scope',home_controller]);
 
 
 var about_controller = require('./modules/about/about_controller');
-app.controller('AboutCtrl', [
-				'$scope',
-				about_controller
-]);
+app.controller('AboutCtrl', ['$scope',about_controller]);
 },{"./bower_components/angular-ui-router/release/angular-ui-router.js":1,"./bower_components/angular/angular.js":2,"./modules/about/about_controller":4,"./modules/home/home_controller":5,"./modules/ui_router.js":6}],4:[function(require,module,exports){
 var about_controller = function($scope){
 	$scope.content = 'Welcome to node-boilerplate!';
@@ -33233,20 +33225,26 @@ var home_controller = function($scope){
 
 module.exports = home_controller;
 },{}],6:[function(require,module,exports){
-var ui_router = function ($stateProvider, $urlRouterProvider) {
+var ui_router = function ($locationProvider, $urlRouterProvider, $stateProvider) {
+
+	$locationProvider.html5Mode({
+		enabled: true,
+		requireBase: false
+	});
+
+	$urlRouterProvider.otherwise('home');
+	
 	$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: 'js/modules/home/home_template.html',
+			templateUrl: '/js/modules/home/home_template.html',
 			controller: 'MainCtrl'
 		})
 		.state('about', {
 			url: '/about',
-			templateUrl: 'js/modules/about/about_template.html',
+			templateUrl: '/js/modules/about/about_template.html',
 			controller: 'AboutCtrl'
 		});
-
-		$urlRouterProvider.otherwise('home');
 };
 
 module.exports = ui_router;

@@ -1,3 +1,4 @@
+//Project Dependencies
 var express = require('express');
 var fs = require('fs');
 var path = require('path');
@@ -20,12 +21,13 @@ if (!fs.existsSync(logDirectory)) { fs.mkdirSync(logDirectory); }
 app.use(morgan('combined', {stream: logger.stream}));
 
 
-//Sets Application Paths
+//Application Configuration
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', routes);
 
@@ -42,7 +44,7 @@ app.use(function(err, req, res, next) {
 	});
 });
 
-//Launch Application
+//Launches Application
 app.listen(app.get('port'), function() {
     console.log('Server has started on http://localhost:' +
         app.get('port') + '; press Ctrl-c to terminate');
