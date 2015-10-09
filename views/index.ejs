@@ -8,28 +8,30 @@
 		<link href="/css/style.css" rel="stylesheet">	
 	</head>
 	<body ng-app="app">
-		<!-- HEADER CONTENT -->
-		<header>
-			<div class="logo">
-				<a href="/home"><img src="/img/logo.png"></a>
-			</div>
-			<nav>
-				<div ng-controller="MainCtrl as main">
-					<ul class="nav">
-						<li>
-							<a href="/home">Home</a>
-						</li>
-						<li>
-							<a href="/about">About</a>
-						</li>
-					</ul>
+		<div id="wrap">
+			<!-- HEADER CONTENT -->
+			<header>
+				<div class="logo">
+					<a href="/home"><img src="/img/logo.png"></a>
 				</div>
-			</nav>
-		</header>
-		<!-- PAGE CONTENT -->
-		<main>
-			<ui-view></ui-view>
-		</main>
+				<nav>
+					<div ng-controller="MainCtrl as main">
+						<ul class="nav">
+							<li>
+								<a href="/home">Home</a>
+							</li>
+							<li>
+								<a href="/about">About</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<!-- PAGE CONTENT -->
+			<main>
+				<ui-view></ui-view>
+			</main>
+		</div>
 		<!-- LOADS JAVASCRIPTS -->
 		<script src="/js/bundle.js"></script>
 	</body>

@@ -16,9 +16,9 @@
   "author": "typicalmike002",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/typicalmike002/simple-chat/issues"
+    "url": "https://github.com/typicalmike002/nodejs-boilerplate/issues"
   },
-  "homepage": "https://github.com/typicalmike002/simple-chat",
+  "homepage": "https://github.com/typicalmike002/nodejs-boilerplate",
   "dependencies": {
     "body-parser": "^1.13.3",
     "compression": "^1.6.0",

@@ -18,7 +18,7 @@ var logDirectory = __dirname + '/log';
 if (!fs.existsSync(logDirectory)) { fs.mkdirSync(logDirectory); }
 
 app.use(morgan('combined', {stream: logger.stream}));
-
+logger.debug('Morgan is ready to log requests.');
 
 //Compression
 app.use(compression( { threshold: 0 }));
@@ -51,9 +51,8 @@ app.use(function(err, req, res, next) {
 
 //Launches Application
 app.listen(app.get('port'), function() {
-	
-    console.log('Server has started on http://localhost:' +
-        app.get('port') + '; press Ctrl-c to terminate');
+	logger.info('Server was started on: ' + new Date());
+    console.log('Now live on http://localhost:' + app.get('port') + ' Press Ctrl-c to terminate');
 });
 
 module.exports = app;
