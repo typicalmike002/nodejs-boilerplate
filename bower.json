@@ -5,7 +5,7 @@
   "authors": [
     "typicalmike002 <townsendm105@gmail.com>"
   ],
-  "description": "My nodejs boilerplate for setting up a new project quickly.",
+  "description": "My nodejs boilerplate for setting up a new project quickly.  All frontend frameworks and libraries are to be included here. ",
   "main": "app.js",
   "moduleType": [
     "CommonJS"
@@ -13,13 +13,11 @@
   "keywords": [
     "boilerplate"
   ],
-  "license": "Apache2",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "angular": "~1.4.6",
