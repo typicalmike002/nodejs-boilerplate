@@ -1,5 +1,7 @@
 var ui_router = function ($locationProvider, $urlRouterProvider, $stateProvider) {
 
+	'use strict';
+
 	$locationProvider.html5Mode({
 		enabled: true,
 		requireBase: false

@@ -33214,6 +33214,9 @@ var about_controller = require('./modules/about/about_controller');
 app.controller('AboutCtrl', ['$scope',about_controller]);
 },{"./bower_components/angular-ui-router/release/angular-ui-router.js":1,"./bower_components/angular/angular.js":2,"./modules/about/about_controller":4,"./modules/home/home_controller":5,"./modules/ui_router.js":6}],4:[function(require,module,exports){
 var about_controller = function($scope){
+
+	'use strict';
+
 	$scope.title = 'About Page';
 	$scope.content = 'Welcome to nodejs-boilerplate!';
 };
@@ -33221,6 +33224,9 @@ var about_controller = function($scope){
 module.exports = about_controller;
 },{}],5:[function(require,module,exports){
 var home_controller = function($scope){
+
+	'use strict';
+
 	$scope.title = 'Home Page';
 	$scope.content = 'This is the home page example.';
 };
@@ -33228,6 +33234,8 @@ var home_controller = function($scope){
 module.exports = home_controller;
 },{}],6:[function(require,module,exports){
 var ui_router = function ($locationProvider, $urlRouterProvider, $stateProvider) {
+
+	'use strict';
 
 	$locationProvider.html5Mode({
 		enabled: true,
