@@ -8,26 +8,38 @@
 		<link href="/css/style.css" rel="stylesheet">	
 	</head>
 	<body ng-app="app">
-		<div id="wrap">
-			<!-- HEADER CONTENT -->
-			<header>
-				<div class="logo">
-					<a href="/home"><img src="/img/logo.png"></a>
-				</div>
-				<nav>
-					<div ng-controller="MainCtrl as main">
-						<ul class="nav">
-							<li>
-								<a href="/home">Home</a>
-							</li>
-							<li>
-								<a href="/about">About</a>
-							</li>
-						</ul>
+		<!-- HEADER CONTENT -->
+		<header>
+			<div class="header">
+				<div class="row">	
+					<div class="col_hlf">
+						<div class="logo">
+							<h1 class="logo_title">
+								<a href="/home" class="logo_link">
+									nodejs-boilerplate
+								</a>
+							</h1>
+						</div>
 					</div>
-				</nav>
-			</header>
-			<!-- PAGE CONTENT -->
+					<nav>
+						<div class="col_hlf">
+							<div ng-controller="MainCtrl as main">
+								<ul class="nav">
+									<li>
+										<a href="/home">Home</a>
+									</li>
+									<li>
+										<a href="/about">About</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- PAGE CONTENT -->
+		<div id="wrap">
 			<main>
 				<ui-view></ui-view>
 			</main>

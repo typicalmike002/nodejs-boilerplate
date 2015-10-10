@@ -1,15 +1,21 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	color: $color2;
 	margin: 0 auto;
 	font-family: $font;
-	max-width: $max-width;
 	background-color: $color1;
 }
 
 a {
-	color: $color4;
+	color: $color5;
 }
 
-h1, h2 {
-	color: $color3;
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
 }

@@ -3,6 +3,33 @@
 \*--------------------*/
 
 #wrap {
-	padding: 0.5em;
-	text-align: center;
+	max-width: $cinema;
+	margin: 0 auto;
+	padding: 0.5em 2em;
+}
+
+.row {
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+
+@media only screen and (min-width: $mobile){ 
+
+	[class*='col_'] {
+		float: left;
+	}
+
+	.col_hlf {
+		width: $hundred/2;
+	}
+
+	.col_thrd {
+		width: $hundred/3;
+	}
+
+	.col_frth {
+		width: $hundred/4;
+	}
 }

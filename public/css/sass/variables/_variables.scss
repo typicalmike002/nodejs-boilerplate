@@ -2,12 +2,16 @@
 	_variables.scss
 \*--------------------*/
 
-$font: 'Lucida Grande', Arial, sans-serif;
+$font: 'Courier New', Courier, monospace;
 
 $color1: #333;	//Slate
 $color2: #CCC;	//Smoke
 $color3: #FFF;	//White
-$color4: #8BD;	//Sky Blue
+$color4: #000;	//Black
+$color5: #8BD;	//Sky Blue
+$color6: #0F0;	//Bright Green
 
 $hundred: 100%;
-$max-width: 1024px;
+
+$mobile: 780px;
+$cinema: 1024px;
