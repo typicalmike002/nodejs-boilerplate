@@ -11,6 +11,8 @@ Using the Browserify addon in grunt, I've created a folder structure for organiz
 
 I have set AngularJS html5Mode option to true and have made the server configurations necessary to remove the hashtag from urls.
 
+Strict mode has been added to each module to ensure proper javascript is being used.
+
 **bower**
 
 Using a .bowerrc file, I have set it so running *bower install* will install packages directly into the *public/js/bower_components* folder.  This is intended to keep frontend libraries and frameworks seperate from backend node_modules and Gruntfile addons.
