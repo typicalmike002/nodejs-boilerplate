@@ -30,6 +30,7 @@
 				color: $color6;
 				text-decoration: none;
 				display: inline-block;
+				text-align: center;
 				width: 150px;
 				padding: 0.5em;
 				margin: 1em 0;
@@ -49,7 +50,8 @@
 		}
 
 		ul.nav {
-
+			text-align: right;
+			
 			li {
 				margin: 0em;
 				display: inline-block;
