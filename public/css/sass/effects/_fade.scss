@@ -1,0 +1,25 @@
+/*--------------------*\
+	animate effect
+\*--------------------*/
+
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+	position: absolute;
+	@include transition(opacity 0.5s ease-in);
+}
+
+[ui-view].ng-enter {
+	opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+	opacity: 1;
+}
+
+[ui-view].ng-leave {
+	opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+	opacity: 0;
+}

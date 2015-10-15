@@ -8,7 +8,7 @@
 	padding: 2em;
 
 	h1.logo_title {
-		margin: 1em 0;
+		margin: 1.1em 0;
 		text-align: center;
 
 		a.logo_link {
@@ -18,14 +18,14 @@
 		}
 	}
 
-	ul.nav {
+	.nav {
 		list-style: none;
 		text-align: center;
 		margin: 1em 0;
 		padding: 0;
 
-		li {
-
+		.nav_link {
+			
 			a {
 				color: $color6;
 				text-decoration: none;
@@ -49,10 +49,10 @@
 			text-align: left;
 		}
 
-		ul.nav {
+		.nav {
 			text-align: right;
 			
-			li {
+			.nav_link {
 				margin: 0em;
 				display: inline-block;
 

@@ -1,7 +1,9 @@
-require('./bower_components/angular/angular.js');
-require('./bower_components/angular-ui-router/release/angular-ui-router.js');
+require('./bower_components/angular/angular.min.js');
+require('./bower_components/angular-ui-router/release/angular-ui-router.min.js');
+require('./bower_components/angular-animate/angular-animate.min.js');
 
-var app = angular.module('app', ['ui.router']);
+
+var app = angular.module('app', ['ui.router', 'ngAnimate']);
 
 var ui_router = require('./modules/ui_router.js');
 app.config(['$locationProvider','$urlRouterProvider','$stateProvider',ui_router]);
