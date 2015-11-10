@@ -1,8 +1,14 @@
 /*--------------------*\
-	_variables.scss
+  	     Fonts
 \*--------------------*/
 
 $font: 'Courier New', Courier, monospace;
+
+
+
+/*--------------------*\
+  	    Colors
+\*--------------------*/
 
 $color1: #333;	//Slate
 $color2: #CCC;	//Smoke
@@ -11,7 +17,16 @@ $color4: #000;	//Black
 $color5: #8BD;	//Sky Blue
 $color6: #0F0;	//Bright Green
 
+
+
+
+/*--------------------*\
+  	   Variables
+\*--------------------*/
+
 $hundred: 100%;
+$spacing: 1.5em;
+
 
 $mobile: 780px;
 $cinema: 1024px;

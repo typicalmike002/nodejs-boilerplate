@@ -1,10 +1,40 @@
 /*--------------------*\
-	transition
+	  transition
 \*--------------------*/
 
 @mixin transition($property) {
-	-moz-transition: 	$property;
-	-o-transition: 		$property;
+	-moz-transition: $property;
+	-o-transition: $property;
 	-webkit-transition: $property;
-	transition: 		$property;
+	transition: $property;
+}
+
+
+
+/*--------------------*\
+	   flex box
+\*--------------------*/
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-moz-box-flex: $values;
+	-webkit-flex: $values;
+	-ms-flex: $values;
+	flex: $values;
+}
+
+@mixin order($value) {
+	-webkit-box-ordinal-group: $value;
+	-moz-box-ordinal-group: $value;
+	-ms-flex-order: $value;
+	-webkit-order: $value;
+	order: $value;
 }

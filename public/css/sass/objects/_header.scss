@@ -2,64 +2,66 @@
 	header content
 \*--------------------*/
 
-
 .header {
-	background-color: $color4;
-	padding: 2em;
+	@include flexbox();
+	flex-direction: column;
+	align-items: center;
+	background: $color4;
+	padding: 0 $spacing;
+}
 
-	h1.logo_title {
-		margin: 1.1em 0;
-		text-align: center;
 
-		a.logo_link {
-			text-decoration: none;
-			font-weight: 100;
-			color: $color6;
-		}
+h1.logo {
+	@include flex(1 100%);
+	margin: 1em 0;
+
+	a {
+		color: $color6;
+		text-decoration: none;
 	}
+}
 
-	.nav {
-		list-style: none;
-		text-align: center;
-		margin: 1em 0;
-		padding: 0;
+.nav {
+	@include flexbox();
+	flex-direction: column;
+}
 
-		.nav_link {
-			
-			a {
-				color: $color6;
-				text-decoration: none;
-				display: inline-block;
-				text-align: center;
-				width: 150px;
-				padding: 0.5em;
-				margin: 1em 0;
-				border: 1px solid $color6;
-				font-size: 1.3em;
-			}
-		}
-	}
+.nav_link {
+ 	padding: 0 $spacing;
+ 	margin: 1em 0;
+	text-align: center;
+ 	
+ 	a {
+ 		text-decoration: none;
+ 		font-size: 1.2em;
+ 		color: $color6;
+ 		border: 1px solid $color6;
+ 		display: block;
+ 		padding: 1em;
+ 		width: 150px;
+ 	}
 }
 
 @media only screen and (min-width: $mobile) {
+
+	.header {
+		flex-direction: row;
+	}
 	
-.header {
+	.header > * { 
+		margin: $spacing 0;
+	}
 
-		h1.logo_title {
-			text-align: left;
-		}
+	h1.logo {
+		margin: 0;
+	}
 
-		.nav {
-			text-align: right;
-			
-			.nav_link {
-				margin: 0em;
-				display: inline-block;
+	.nav {
+		flex-direction: row;
+	}
 
-				a {
-					margin: 0;
-				}
-			}
-		}
-}
+	.nav_link {
+		margin: 0;
+	}
+
 }

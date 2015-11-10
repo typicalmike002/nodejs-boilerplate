@@ -1,9 +1,55 @@
+/*--------------------*\
+	    Add ons
+\*--------------------*/
+
 @import "compass/css3";
+
+
+
+
+/*--------------------*\
+	Variables/Mixins
+\*--------------------*/
+
 @import "variables/variables";
 @import "mixins/mixins";
 
+
+
+
+/*--------------------*\
+	 Basic Browsers
+\*--------------------*/
+
 @import "basic/basic";
-@import "enhanced/enhanced";
-@import "layout/layout";
+
+
+
+
+/*--------------------*\
+	  Site Objects
+\*--------------------*/
+
 @import "objects/header";
+@import "objects/content";
+
+
+
+/*--------------------*\
+	    Effects
+\*--------------------*/
+
 @import "effects/fade";
+
+
+/*--------------------*\
+	  Enhancements
+\*--------------------*/
+@media only all {
+	
+	@import "enhanced/enhanced";
+
+}
+
+
+
