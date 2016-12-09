@@ -1,7 +1,7 @@
 # nodejs-boilerplate
 
 ## About
-A boilerplate for a developer environment pre-built for a nodejs project using expressjs for the backend and angularjs for the front end.  This boilerplate also comes with a built in logger for requests as well as a Gruntfile with my favorite addons for developing nodejs projects.
+A boilerplate for a developer environment pre-built for a nodejs project using expressjs for the backend and angularjs for the front end.  This boilerplate also comes with a built in logger for requests as well as a Gruntfile with my favorite addons for developing nodejs projects. :godmode:
 
 ## Dependencies
 
